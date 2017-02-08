@@ -20,4 +20,7 @@ before_script:
   # We have to install chef-sugar for ChefSpec
   - /opt/chefdk/embedded/bin/chef gem install chef-sugar
 script:
-  - /bin/true
+  - /opt/chefdk/embedded/bin/chef --version
+  - /opt/chefdk/embedded/bin/foodcritic --version
+  - /opt/chefdk/embedded/bin/foodcritic
+  - /opt/chefdk/bin/chef exec rspec
